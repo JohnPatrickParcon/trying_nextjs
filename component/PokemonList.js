@@ -1,23 +1,13 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
+import { showingPokemon } from "./QueryComponent";
 
 const PokemonList = ({pokemon: {name, url}}) => {
-    
-    const [pokemonData, setPokemonData] = useState([]);
-
-    useEffect(() => {getPokemonData()}, []);
-
-    const getPokemonData = async () => {
-        const req = await fetch(url);
-        const res = await req.json();
-        setPokemonData(res);
-    }
-
-    const {sprites: {front_default} = "placeholder"} = pokemonData;
+    const pokemonSprite = showingPokemon(url);
     return(
         <>
         <Suspense>
-            <div style={{border: "1px dotted red"}}>    
-                <img src={front_default}></img>
+            <div className={"pokemon-" + name}>    
+                <img src={pokemonSprite}></img>
                 <p>{name}</p>
             </div>
         </Suspense>
