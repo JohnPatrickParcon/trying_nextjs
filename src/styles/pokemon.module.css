@@ -1,0 +1,9 @@
+.pokemonGrid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, auto);
+}
+.pokemonCard{
+    display: grid;
+    text-align: center;
+}

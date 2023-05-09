@@ -1,5 +1,6 @@
 import { gettingPokemon } from "./QueryComponent";
 import PokemonList from "./PokemonList";
+import styles from "../src/styles/pokemon.module.css";
 
 const PokemonListQuery = () => {
     const pokemon = gettingPokemon();
@@ -10,9 +11,9 @@ const PokemonListQuery = () => {
         );
 
     return(
-        <div className="pokemonGrid">
-            {pokemonList}
-        </div>
+            <div className={styles.pokemonGrid} >
+                {pokemonList}
+            </div>
     );
 };
 
