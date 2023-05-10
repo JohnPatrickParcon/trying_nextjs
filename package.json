@@ -1,8 +1,11 @@
 {
+  "homepage": "https://JohnPatrickParcon.github.io/trying_nextjs",
   "name": "trying_nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,6 +15,7 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "gh-pages": "^5.0.0",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.4",
