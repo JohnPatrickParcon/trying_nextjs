@@ -11,7 +11,7 @@ const PokemonListQuery = () => {
         );
 
     return(
-            <div className={styles.pokemonGrid} >
+            <div className={styles.pokemonGrid}>
                 {pokemonList}
             </div>
     );

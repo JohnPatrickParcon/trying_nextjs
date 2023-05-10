@@ -16,7 +16,7 @@ export function gettingPokemon() {
     }
 
 export function showingPokemon(url) {
-    const [pokemonData, setPokemonData] = useState([]);
+    const [pokemonData, setPokemonData] = useState();
 
     useEffect(() => {getPokemonData()}, []);
     
@@ -26,6 +26,6 @@ export function showingPokemon(url) {
         const {sprites: {front_default} = "placeholder"} = await res;
         setPokemonData(front_default);
     }
-    return pokemonData;
+    return (pokemonData);
 }
 

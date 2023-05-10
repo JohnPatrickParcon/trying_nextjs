@@ -1,22 +1,14 @@
 import Link from "next/link"
+import styles from "../src/styles/pokemon.module.css"
+
 
 const NavBar = () => {
     return(
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link href={'/'}>
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={'/about'}>
-                            About
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+        <nav className={styles.nav}>
+            <Link href={'/'}>Home</Link>
+            <Link href={'/about'}>About</Link>
+        </nav>
         </>
     )
 }
